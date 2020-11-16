@@ -31,6 +31,8 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     this.motorsRight = new SpeedControllerGroup(new Talon(0), new Talon(1), new Talon(2));
     this.motorsLeft = new SpeedControllerGroup(new Talon(3), new Talon(4), new Talon(5));
+    
+    this.pilot = new Joystick(1);
 
     this.driver = new DifferentialDrive(this.motorsRight, this.motorsLeft);
   }
